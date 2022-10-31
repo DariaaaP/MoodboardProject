@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/style.scss">
+</head>
+<body>
+    <header class="header">
+        <nav class="header__nav">
+            <a class="header__link" href="./authorization-page.html">Страничка авторизации</a>
+            <a class="header__link" href="./index.html">Главная</a>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="container-info">
+            <div class="container-avatar">
+                <img id="avatar-pic" src="https://cdnn21.img.ria.ru/images/148839/96/1488399659_0:0:960:960_1440x900_80_0_1_de097f65991b7b7c1f36b65356d4d34c.jpg.webp?source-sid=not_rian_photo" alt="ava">
+                <div>
+                    <button class="btn" id="change-pic-btn"><span>Изменить аватар</span></button>
+                    <div class="change-pic invisible">
+                        <input id="avatar" type="text" placeholder="link">
+                        <button class="btn" id="save-pic-btn"><span>Сохранить</span></button>
+                        <button class="btn"id="cancel-pic-btn"><span>Отменить</span></button>
+                    </div>
+                </div>
+            </div>
+            <div class="container-nickname">
+                <div id="nickname">Nickname</div>
+                <button class="btn" id="change-nickname-btn"><span>Изменить никнейм</span></button>
+                <div class="change-nickname invisible">
+                    <input id="nickname-input" type="text" placeholder="new nickname">
+                    <button class="btn" id="save-nickname-btn"><span>Сохранить</span></button>
+                    <button class="btn" id="cancel-nickname-btn"><span>Отменить</span></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-calendar">
+            <div id="month"></div>
+            <div class="date_number">
+
+            </div>
+        </div>
+    </div>
+    <script src="./scripts/script.js"></script>
+</body>
+</html>
