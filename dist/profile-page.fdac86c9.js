@@ -55,18 +55,20 @@ month.innerHTML = month_names[date.getMonth()] + " " + date.getFullYear();
 Date.prototype.daysInMonth = function() {
     return 32 - new Date(this.getFullYear(), this.getMonth(), 32).getDate();
 };
-let arr = new Date().daysInMonth();
-for(let i = 1; i <= arr; i++)list.innerHTML += `<button class="date_btn">${i}</button>`;
+let dates = new Date().daysInMonth();
+for(let i = 1; i <= dates; i++)list.innerHTML += `<button class="date_btn">${i}</button>`;
 function getInfo() {
     mood.classList.toggle("show");
 }
 let btns = document.querySelectorAll(".date_btn");
+let keys = Object.keys(localStorage);
 btns.forEach((btn, index)=>{
     btn.addEventListener("click", ()=>{
         getInfo();
         btn.classList.toggle("click");
         list.classList.toggle("active");
-        mood.innerHTML = `Настроение ${index + 1} числа было ...`;
+        mood.innerHTML = `Настроение ещё не определено :>`;
+        for (let key of keys)if (key == `${index + 1}.${date.getMonth()}`) mood.innerHTML = `Настроение ${index + 1} числа было ${localStorage.getItem(key)}`;
         for(let b in btns)if (list.classList.contains("active")) {
             btns[b].disabled = true;
             if (btns[b].classList.contains("click")) btns[b].disabled = false;

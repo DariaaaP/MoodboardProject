@@ -552,6 +552,7 @@ async function hetPost(url) {
 let moods = document.querySelectorAll("#mood");
 let handleClick = (event)=>{
     input.value = event.target.dataset.mood;
+    localStorage.setItem(`${new Date().getDate()}.${new Date().getMonth()}`, input.value);
     console.log(hetPost(event.target.dataset.card));
     console.log(event.target.dataset.mood);
     apiRequest();

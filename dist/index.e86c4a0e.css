@@ -35,6 +35,10 @@ body {
   width: 150px;
 }
 
+.container .gallery .emotions img:hover {
+  cursor: pointer;
+}
+
 .container .gallery #header {
   min-height: 70px;
   flex-wrap: wrap;
@@ -198,50 +202,55 @@ body {
   color: #c4c4c4;
 }
 
+.container-profile {
+  width: 100%;
+  background: linear-gradient(45deg, #d299c2, #fef9d7);
+  border-radius: 15px;
+  margin: 0 auto;
+  display: flex;
+}
+
 .container-nickname {
   flex-direction: column;
   align-items: center;
-  margin: 3% 5%;
+  margin-top: 5%;
   display: flex;
 }
 
 .container-info {
+  width: 40%;
   text-align: center;
   margin: 3% 5%;
   padding: 3%;
 }
 
-.container-avatar {
-  margin: 15%;
-}
-
-.container-info, .container-calendar {
+.container-calendar, .information-mood {
   width: 40%;
   background-color: #b652b34d;
   border-radius: 11px;
 }
 
 #month {
-  font-size: 35px;
+  font-size: 3.5vw;
 }
 
 .profile {
   width: 15%;
   color: #fff;
-  background-color: #bd9dcb;
-  border-radius: 5px;
+  background: radial-gradient(circle, #f6eba9 0%, #faac95 100%);
+  border-radius: 12px;
   justify-content: center;
   align-items: center;
   text-decoration: none;
   display: flex;
   position: absolute;
-  top: 0;
-  right: 0;
-  box-shadow: inset 200px 0 #0000004d;
+  top: 1.5%;
+  right: .5%;
+  box-shadow: 0 14px 28px #00000040, 0 10px 10px #00000038;
 }
 
 .profile:hover {
-  box-shadow: 0 14px 28px #00000040, 0 10px 10px #00000038;
+  background: radial-gradient(circle, #3f5efb81 0%, #fc466b8c 100%);
 }
 
 .profile #avatar-pic {
@@ -254,18 +263,32 @@ body {
   width: 50%;
   text-align: center;
   margin: 5%;
-  font-size: 15px;
+  font-size: 1.5vw;
 }
 
 .container-calendar {
-  width: auto;
+  height: 200px;
+  background: radial-gradient(circle, #f6eba9 0%, #faac95 100%);
   flex-direction: column;
   align-items: center;
-  margin: 3% 5%;
+  margin: 10% 5% 3%;
+  padding: 3%;
   display: flex;
-  position: absolute;
-  top: 25%;
-  left: 50%;
+}
+
+.information-mood {
+  display: none;
+}
+
+.information-mood.show {
+  width: 100%;
+  background: radial-gradient(circle, #c0aeee 0%, #e994b5 100%);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5%;
+  animation: 2s show;
+  display: flex;
 }
 
 .date_number {
@@ -286,6 +309,8 @@ body {
 .date_btn:hover {
   cursor: pointer;
   color: #c4c4c4;
+  background-color: #8b008b7f;
+  box-shadow: 0 14px 28px #00000040, 0 5px 5px #00000038;
 }
 
 #avatar-pic {
@@ -297,8 +322,8 @@ body {
 
 #nickname {
   width: 50%;
-  margin: 5%;
-  font-size: 35px;
+  margin: 5% 5% 0;
+  font-size: 3.5vw;
 }
 
 input {
@@ -332,6 +357,11 @@ input::placeholder {
   background-color: #2e008b;
 }
 
+.click:hover {
+  background-color: #4d23a2dc;
+  box-shadow: 0 14px 28px #00000040, 0 10px 10px #00000038;
+}
+
 .btn {
   width: 222px;
   height: 35px;
@@ -347,7 +377,6 @@ input::placeholder {
   color: #fff;
   letter-spacing: .2em;
   text-transform: uppercase;
-  font-family: Roboto-Regular;
   font-size: 12px;
   line-height: 12px;
 }
@@ -355,6 +384,16 @@ input::placeholder {
 .btn:hover {
   background-color: #8b008b7f;
   box-shadow: 0 14px 28px #00000040, 0 10px 10px #00000038;
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 .form {
