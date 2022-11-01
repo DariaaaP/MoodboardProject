@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 * {
   margin: 0;
   padding: 0;
@@ -150,6 +151,18 @@ body {
   }
 }
 
+=======
+.container {
+  width: 90%;
+  height: 100vh;
+  background: linear-gradient(45deg, #d299c2, #fef9d7);
+  border-radius: 15px;
+  margin: 0 auto;
+  display: flex;
+  position: relative;
+}
+
+>>>>>>> 3b7dc2a (changed style for calendar)
 .header {
   gap: 50px;
   margin: 30px 49px;
@@ -180,7 +193,11 @@ body {
 .container-nickname {
   flex-direction: column;
   align-items: center;
+<<<<<<< HEAD
   margin: 3% 5%;
+=======
+  margin-top: 5%;
+>>>>>>> 3b7dc2a (changed style for calendar)
   display: flex;
 }
 
@@ -190,11 +207,15 @@ body {
   padding: 3%;
 }
 
+<<<<<<< HEAD
 .container-avatar {
   margin: 15%;
 }
 
 .container-info, .container-calendar {
+=======
+.container-info, .container-calendar, .information-mood {
+>>>>>>> 3b7dc2a (changed style for calendar)
   width: 40%;
   background-color: #b652b34d;
   border-radius: 11px;
@@ -238,12 +259,23 @@ body {
 
 .container-calendar {
   width: auto;
+<<<<<<< HEAD
   flex-direction: column;
   align-items: center;
   margin: 3% 5%;
   display: flex;
   position: absolute;
   top: 25%;
+=======
+  background: radial-gradient(circle, #f6eba9 0%, #faac95 100%);
+  flex-direction: column;
+  align-items: center;
+  margin: 3% 5%;
+  padding: 3%;
+  display: flex;
+  position: absolute;
+  top: 15%;
+>>>>>>> 3b7dc2a (changed style for calendar)
   left: 50%;
 }
 
@@ -265,6 +297,11 @@ body {
 .date_btn:hover {
   cursor: pointer;
   color: #c4c4c4;
+<<<<<<< HEAD
+=======
+  background-color: #8b008b7f;
+  box-shadow: 0 14px 28px #00000040, 0 5px 5px #00000038;
+>>>>>>> 3b7dc2a (changed style for calendar)
 }
 
 #avatar-pic {
@@ -311,6 +348,14 @@ input::placeholder {
   background-color: #2e008b;
 }
 
+<<<<<<< HEAD
+=======
+.click:hover {
+  background-color: #4d23a2dc;
+  box-shadow: 0 14px 28px #00000040, 0 10px 10px #00000038;
+}
+
+>>>>>>> 3b7dc2a (changed style for calendar)
 .btn {
   width: 222px;
   height: 35px;
@@ -336,6 +381,37 @@ input::placeholder {
   box-shadow: 0 14px 28px #00000040, 0 10px 10px #00000038;
 }
 
+<<<<<<< HEAD
+=======
+.information-mood {
+  display: none;
+}
+
+.information-mood.show {
+  width: auto;
+  background: radial-gradient(circle, #c0aeee 0%, #e994b5 100%);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 3% 5%;
+  padding: 5%;
+  animation: 2s show;
+  display: flex;
+  position: absolute;
+  inset: 55% 0 20% 50%;
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+>>>>>>> 3b7dc2a (changed style for calendar)
 .form {
   width: 60vw;
   height: 80vh;

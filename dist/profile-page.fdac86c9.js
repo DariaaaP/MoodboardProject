@@ -10,6 +10,8 @@ let imgPic = document.querySelector("#avatar-pic");
 let changeNickname = document.querySelector(".change-nickname");
 let inputNickname = document.querySelector("#nickname-input");
 let divNickname = document.querySelector("#nickname");
+let list = document.querySelector(".date_number");
+let mood = document.querySelector(".information-mood");
 function changeElement(btn, container) {
     btn.classList.toggle("invisible");
     container.classList.toggle("invisible");
@@ -54,19 +56,21 @@ Date.prototype.daysInMonth = function() {
     return 32 - new Date(this.getFullYear(), this.getMonth(), 32).getDate();
 };
 let arr = new Date().daysInMonth();
-for(let i = 1; i <= arr; i++){
-    let list = document.querySelector(".date_number");
-    list.innerHTML += `<button class="date_btn">${i}</button><p class="date-mood">Настроение ${i} числа было ...</p>`;
-}
-function getInfo(el) {
-    let hint = el.nextElementSibling;
-    hint.classList.toggle("hint");
+for(let i = 1; i <= arr; i++)list.innerHTML += `<button class="date_btn">${i}</button>`;
+function getInfo() {
+    mood.classList.toggle("show");
 }
 let btns = document.querySelectorAll(".date_btn");
-btns.forEach((btn)=>{
+btns.forEach((btn, index)=>{
     btn.addEventListener("click", ()=>{
-        getInfo(btn);
+        getInfo();
         btn.classList.toggle("click");
+        list.classList.toggle("active");
+        mood.innerHTML = `Настроение ${index + 1} числа было ...`;
+        for(let b in btns)if (list.classList.contains("active")) {
+            btns[b].disabled = true;
+            if (btns[b].classList.contains("click")) btns[b].disabled = false;
+        } else btns[b].disabled = false;
     });
 });
 btnChangeAvatar.addEventListener("click", ()=>changeElement(btnChangeAvatar, changePic));

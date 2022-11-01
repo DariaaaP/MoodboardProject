@@ -217,7 +217,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 3% 5%;
+
+    margin-top: 5%;
 }
 
 .container-info {
@@ -227,12 +228,9 @@
     text-align: center;
 }
 
-.container-avatar {
-    margin: 15%;
-}
-
 .container-info,
-.container-calendar {
+.container-calendar,
+.information-mood {
     width: 40%;
 
     background-color: rgba(182, 82, 179, .3);
@@ -281,13 +279,16 @@
 
 .container-calendar {
     margin: 3% 5%;
+    padding: 3%;
     display: flex;
     flex-direction: column;
     align-items: center;
     position: absolute;
-    top: 25%;
+    top: 15%;
     left: 50%;
     width: auto;
+
+    background: radial-gradient(circle, rgba(246, 235, 169, 1) 0%, rgba(250, 172, 149, 1) 100%);
 }
 
 .date_number {
@@ -309,6 +310,8 @@
     &:hover {
         cursor: pointer;
         color: #C4C4C4;
+        background-color: rgba(139, 0, 139, 0.498);
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 5px 5px rgba(0, 0, 0, 0.22);
     }
 }
 
@@ -361,6 +364,11 @@ input {
 
 .click {
     background-color: rgb(46, 0, 139);
+
+    &:hover {
+        background-color: rgba(77, 35, 162, 0.863);
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    }
 }
 
 .btn {
@@ -387,6 +395,36 @@ input {
     &:hover {
         background-color: rgba(139, 0, 139, 0.498);
         box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    }
+}
+
+.information-mood {
+    display: none;
+
+    &.show {
+        position: absolute;
+        inset: 55% 0 20% 50%;
+        width: auto;
+        margin: 3% 5%;
+        padding: 5%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        animation: show 2s 1;
+        background: radial-gradient(circle, rgba(192, 174, 238, 1) 0%, rgba(233, 148, 181, 1) 100%);
+    }
+}
+
+@keyframes show {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
     }
 }
 
