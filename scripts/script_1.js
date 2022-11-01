@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function(event) {
     let form = document.querySelector('#form');
+    let inputName = document.querySelector('#formName');
 
     form.addEventListener('submit', formSend);
 
@@ -9,6 +10,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
         let error = formValidate(form);
 
         let formData = new FormData(form);
+
+        localStorage.setItem('namee', inputName.value);
 
         if (error === 0) {
             form.classList.add('_sending');

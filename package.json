@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "watch": "parcel index.html --open --port 3000"
+    "watch": "parcel authorization-page.html --open --port 3000"
   },
   "author": "",
   "license": "ISC",
