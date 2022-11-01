@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 console.log(result);
                 form.reset();
                 form.classList.remove('_sending');
+                location.href='index.html';
             }else{
                 alert("Ошибка");
                 form.classList.remove('_sending');
