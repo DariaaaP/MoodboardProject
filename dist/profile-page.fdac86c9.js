@@ -12,11 +12,13 @@ let inputNickname = document.querySelector("#nickname-input");
 let divNickname = document.querySelector("#nickname");
 let list = document.querySelector(".date_number");
 let mood = document.querySelector(".information-mood");
+let btns = document.querySelectorAll(".date_btn");
+let keys = Object.keys(localStorage);
+divNickname.innerHTML = localStorage.getItem("namee");
 function changeElement(btn, container) {
     btn.classList.toggle("invisible");
     container.classList.toggle("invisible");
 }
-divNickname.innerHTML = localStorage.getItem("namee");
 function saveElement(input, type, elem, container, btn) {
     let src = input.value;
     if (src != "") {
@@ -60,8 +62,6 @@ for(let i = 1; i <= dates; i++)list.innerHTML += `<button class="date_btn">${i}<
 function getInfo() {
     mood.classList.toggle("show");
 }
-let btns = document.querySelectorAll(".date_btn");
-let keys = Object.keys(localStorage);
 btns.forEach((btn, index)=>{
     btn.addEventListener("click", ()=>{
         getInfo();
