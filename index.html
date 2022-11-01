@@ -4,8 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">  
+    <link rel="stylesheet" href="./style/style.scss">
     <title>Document</title>
+    <style>
+
+    
+    </style>
 </head>
 <body>
     <header class="header">
@@ -19,7 +24,33 @@
             <img id="avatar-pic" alt="pic">
             <p id="nickname" class="profile_nickname"></p>
         </a>
+
+        
+        <div class="gallery">
+
+                <div class="emotions">
+                    <h1>Какое у тебя сегодня настроение?</h1>
+                    <img src="./assets/happy.png" alt="" data-mood="happy" id="mood">
+                    <img src="./assets/sad.png" alt="" data-mood="sad" id="mood">
+                    <img src="./assets/angry.png" alt="" data-mood="angry" id="mood">
+                    <img src="./assets/productive.png" alt="" data-mood="productive" id="mood">
+                    <img src="./assets/relaxed.png" alt="" data-mood="relaxed" id="mood">
+                    <img src="./assets/stressed.png" alt="" data-mood="stressed" id="mood">
+                    <img src="./assets/tired.png" alt="" data-mood="tired" id="mood">
+                </div>
+                <div id="header">
+                <div id="search_box" class="show">
+                    <input id="input" type="text" placeholder="Search..."><i id="search" class="fas fa-search"></i>
+                </div>
+                </div>
+
+            </div>        
+        
+    </div>
+    <div class="container grid">
+        <div id="grid"></div>
     </div>
     <script src="./scripts/script.js"></script>
+    <script src="./scripts/scriptGallery.js"></script>
 </body>
 </html>
