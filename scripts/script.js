@@ -82,3 +82,5 @@ btnCancelAvatar.addEventListener('click', () => changeElement(btnChangeAvatar, c
 btnChangeNickname.addEventListener('click', () => changeElement(btnChangeNickname, changeNickname));
 btnSaveNickname.addEventListener('click', () => saveElement(inputNickname, "innerHtml", divNickname, changeNickname, btnChangeNickname));
 btnCancelNickname.addEventListener('click', () => changeElement(btnChangeNickname, changeNickname));
+
+

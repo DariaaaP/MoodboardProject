@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">  
+    <link rel="stylesheet" href="./style/style.scss">
     <title>Document</title>
 </head>
 <body>
@@ -15,11 +16,41 @@
         </nav>
     </header>
     <div class="container">
+        
         <a href="./profile-page.html" class="profile">
             <img id="avatar-pic" alt="pic">
             <p id="nickname" class="profile_nickname"></p>
         </a>
+
+        <div class="gallery">
+
+                <div class="emotions">
+                    <h1>Какое у тебя сегодня настроение?</h1>
+                        <img src="./assets/happy.png" alt="" data-mood="happy" data-card="http://localhost:3001/happy" id="mood">
+                        <img src="./assets/sad.png" alt="" data-mood="sad" data-card="http://localhost:3001/sad" id="mood">
+                        <img src="./assets/angry.png" alt="" data-mood="angry" data-card="http://localhost:3001/angry" id="mood">
+                        <img src="./assets/productive.png" alt="" data-mood="productive" data-card="http://localhost:3001/productive" id="mood">
+                        <img src="./assets/relaxed.png" alt="" data-mood="relaxed" data-card="http://localhost:3001/relaxed" id="mood">
+                        <img src="./assets/stressed.png" alt="" data-mood="stressed" data-card="http://localhost:3001/stressed" id="mood">
+                        <img src="./assets/tired.png" alt="" data-mood="tired" data-card="http://localhost:3001/tired" id="mood">
+                </div>
+                <div id="header">
+                    <div id="search_box" class="show">
+                        <input id="input" type="text" placeholder="Search..."><i id="search" class="fas fa-search"></i>
+                    </div>
+                </div>
+        </div>    
     </div>
+
+    <div class="container grid">
+        <div id="grid"></div>
+    </div>
+
+    <div class="container">
+        <div class="cardsContainer"></div> 
+    </div>
+
     <script src="./scripts/script.js"></script>
+    <script type="module" src="./scripts/app.js"></script>
 </body>
 </html>

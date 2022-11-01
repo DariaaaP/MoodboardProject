@@ -1,13 +1,188 @@
-.container {
-    position: relative;
-    width: 90%;
-    height: 100vh;
-    margin: 0 auto;
-    display: flex;
+*{
+    margin: 0;
+    padding: 0;
+    }
 
+    body{
+        font-family: 'Comfortaa', cursive;
+        
+        color: black;
+        overflow-x: hidden;
+        }
+
+.container{
+    position: relative;
+    width: 1280px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
     background: linear-gradient(45deg, #d299c2, #fef9d7);
+    border-radius: 15px;  
+
+    .gallery {
+            
+        
+        .emotions {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 35px;
+        
+            h1 {
+            width: 100%;
+            text-align: center;
+            margin: 35px;
+            color: white;
+        }
+
+            img {
+                width: 150px;
+            }
+        }
+
+        #header{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            min-height: 70px;
+            padding: 0 20px;
+
+            #search_box{
+                position: relative;
+                width: 750px;
+
+                input{
+                    box-sizing: border-box;
+                    height: 40px;
+                    width: 100%;
+                    font-size: 1rem;
+                    padding: 8px;
+                    border-radius: 25px;
+                    outline: none;
+                    
+                    -webkit-transition: all 0.10s ease-in-out;
+                    -moz-transition: all 0.10s ease-in-out;
+                    -ms-transition: all 0.10s ease-in-out;
+                    -o-transition: all 0.10s ease-in-out;
+                    transition: all 0.10s ease-in-out;
+                    border: 1px solid #DDDDDD;
+
+                    &:focus{
+                        box-shadow: 0 0 5px #cf6db3;
+                        border: 1px solid #cf6db3;
+                    }
+                    }
+
+                
+                    i{
+                        color: black;
+                        position: absolute;
+                        cursor: pointer;
+                        top: 25%;
+                        right: 4%;
+                        transition: 1s;
+
+                        &:hover{
+                            color: #cf6db3;
+                        }
+
+                    }
+                }
+
+            }
+        }
+        .cardsContainer {
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+
+            .card {
+                background: #fff;
+                width: 30%;
+                border-radius: 15px;  
+                margin: 15px 0 15px 0;
+                padding: 10px;
+
+                h2 {
+                    padding-bottom: 7px;
+                    color: #cf6db3;
+                }
+            }
+        }
+    }
+
+
+        
+
+.grid {
+    background: linear-gradient(45deg, #fef9d7, #d299c2);
     border-radius: 15px;
+
+        #grid{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: flex-start;
+
+                .img{
+                    width: 400px;
+                    height: 214px;
+                    margin-top: 15px;
+                    margin-bottom: 15px;
+                    background-position: center;
+                    background-size: cover;
+                    border-radius: 2px;
+                    cursor: pointer;
+                    border: 2px solid #fff;
+                    border-radius: 15px;
+
+
+                    }
+            }
 }
+
+
+.show {
+    display: none;
+}
+
+
+    @media(max-width:1280px){
+        .container{width: 100%;}
+    }
+
+    @media(max-width:768px){
+        #main{width: 95%;}
+    
+        .img{width: 100%;}
+    
+        #header{
+        margin: 10px 0;
+        padding: 20px;
+        gap: 10px;
+        justify-content: center;
+        }
+    
+        #header h2{padding: 5px 0;}
+    }
+    
+    @media(max-width:480px){
+        #header h2{
+        text-align: center;
+        font-size: 1.5rem;
+        }
+    
+        #search_box{
+        width: 80%;
+        margin: auto;
+        }
+    
+        #search_box input{font-size: .7rem;}
+    }
+
+
 
 .header {
     display: flex;
