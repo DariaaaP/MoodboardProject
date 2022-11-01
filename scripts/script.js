@@ -17,6 +17,7 @@ function changeElement(btn, container) {
     btn.classList.toggle("invisible");
     container.classList.toggle("invisible");
 }
+divNickname.innerHTML = localStorage.getItem('namee');
 
 function saveElement(input, type, elem, container, btn) {
     let src = input.value;
@@ -36,12 +37,6 @@ function saveElement(input, type, elem, container, btn) {
 }
 
 document.addEventListener("DOMContentLoaded", function(event) {
-    if (localStorage.getItem('namee') == null || localStorage.getItem('namee') == "") {
-        localStorage.setItem('namee', divNickname.innerHTML);
-    } else {
-        divNickname.innerHTML = localStorage.getItem('namee');
-    }
-
     if (localStorage.getItem('avatar') == null || localStorage.getItem('avatar') == "") {
         localStorage.setItem('avatar', imgPic.src);
     } else {
