@@ -11,24 +11,25 @@
     <div class="wrapper">
         <div class="form">
             <form action="#" id="form" class="form__body">
-                <h1 class="form__title">Привет :)</h1>
+                <h1 class="form__title">Добро пожаловать</h1>
                 <div class="form__item">
                     <label for="formName" class="form__label">Имя*:</label>
-                    <input id="formName" type="text" name="name" class="form__input">
+                    <input id="formName" type="text" name="name" class="form__input _req">
                 </div>
                 <div class="form__item">
                     <label for="formEmail" class="form__label">E-mail*:</label>
-                    <input id="formEmail" type="text" name="email" class="form__input">
+                    <input id="formEmail" type="text" name="email" class="form__input _req _email">
                 </div>
                 <div class="form__item">
                     <div class="checkbox">
-                        <input id="formAgreement" checked type="checkbox" name="agreement" class="checkbox__input">
+                        <input id="formAgreement" checked type="checkbox" name="agreement" class="checkbox__input _req">
                         <label for="formAgreement" class="checkbox__label"><span>Я даю свое согласие на обработку персональных данных в соответсвии с <a href="">Условиями</a>*</span></label>
                     </div>
                 </div>
-                <button class="form__button">Готово</button>
+                <button onclick="location.href='index.html'" class="form__button">Готово</button>
             </form>
         </div>
     </div>
+    <script src="./scripts/script_1.js"></script>
 </body>
 </html>
