@@ -13,11 +13,17 @@ let changeNickname = document.querySelector(".change-nickname");
 let inputNickname = document.querySelector("#nickname-input");
 let divNickname = document.querySelector("#nickname");
 
+let list = document.querySelector(".date_number");
+let mood = document.querySelector('.information-mood');
+let btns = document.querySelectorAll('.date_btn');
+let keys = Object.keys(localStorage);
+
+divNickname.innerHTML = localStorage.getItem('namee');
+
 function changeElement(btn, container) {
     btn.classList.toggle("invisible");
     container.classList.toggle("invisible");
 }
-divNickname.innerHTML = localStorage.getItem('namee');
 
 function saveElement(input, type, elem, container, btn) {
     let src = input.value;
@@ -46,30 +52,44 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 let month = document.querySelector('#month');
 let month_names = ['January', 'February', 'March','April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-let date = new Date()
+let date = new Date();
 month.innerHTML = month_names[date.getMonth()]+ ' ' + date.getFullYear();
 
 Date.prototype.daysInMonth = function() {
     return 32 - new Date(this.getFullYear(), this.getMonth(), 32).getDate();
 };
-let arr = new Date().daysInMonth();
 
-for (let i=1; i <= arr; i++) {
-    let list = document.querySelector(".date_number");
-    list.innerHTML += (`<button class="date_btn">${i}</button><p class="date-mood">Настроение ${i} числа было ...</p>`);
+let dates = new Date().daysInMonth();
+for (let i=1; i <= dates; i++) {
+    list.innerHTML += (`<button class="date_btn">${i}</button>`);
 }
 
-function getInfo(el) {
-    let hint = el.nextElementSibling;
-    hint.classList.toggle("hint");
+function getInfo() {
+    mood.classList.toggle('show');
 }
 
-let btns = document.querySelectorAll('.date_btn');
-    
-btns.forEach((btn) => {
+
+btns.forEach((btn, index) => {
     btn.addEventListener('click', () => {
-        getInfo(btn);
+        getInfo();
         btn.classList.toggle('click');
+        list.classList.toggle('active');
+        mood.innerHTML = `Настроение ещё не определено :>`
+        for (let key of keys) {
+            if (key == `${index+1}.${date.getMonth()}`) {
+                mood.innerHTML = `Настроение ${index+1} числа было ${localStorage.getItem(key)}`
+            }
+        }
+        for (let b in btns) {
+            if (list.classList.contains('active')) {
+                btns[b].disabled = true;
+                if (btns[b].classList.contains('click')) {
+                    btns[b].disabled = false;
+                }
+            } else {
+                btns[b].disabled = false;
+            }
+        }
     });
 });
 
