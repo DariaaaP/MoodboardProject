@@ -32,6 +32,7 @@
             width: 100%;
             text-align: center;
             margin: 35px;
+            color: white;
         }
 
             img {
@@ -86,19 +87,35 @@
                             color: #cf6db3;
                         }
 
-                        }
+                    }
                 }
-            
+
             }
+        }
+        .cardsContainer {
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
 
+            .card {
+                background: #fff;
+                width: 30%;
+                border-radius: 15px;  
+                margin: 15px 0 15px 0;
+                padding: 10px;
 
+                h2 {
+                    padding-bottom: 7px;
+                    color: #cf6db3;
+                }
+            }
+        }
     }
-    
 
-    
-  }
-  
-  .grid {
+
+        
+
+.grid {
     background: linear-gradient(45deg, #fef9d7, #d299c2);
     border-radius: 15px;
 
@@ -118,49 +135,52 @@
                     background-size: cover;
                     border-radius: 2px;
                     cursor: pointer;
+                    border: 2px solid #fff;
+                    border-radius: 15px;
+
 
                     }
             }
-  }
+}
 
 
-  .show {
+.show {
     display: none;
-  }
+}
 
 
-  @media(max-width:1280px){
-    .container{width: 100%;}
-   }
-   
-   @media(max-width:768px){
-     #main{width: 95%;}
-   
-     .img{width: 100%;}
-   
-     #header{
-       margin: 10px 0;
-       padding: 20px;
-       gap: 10px;
-       justify-content: center;
-     }
-   
-     #header h2{padding: 5px 0;}
-   }
-   
-   @media(max-width:480px){
-     #header h2{
-       text-align: center;
-       font-size: 1.5rem;
-     }
-   
-     #search_box{
-       width: 80%;
-       margin: auto;
-     }
-   
-     #search_box input{font-size: .7rem;}
-   }
+    @media(max-width:1280px){
+        .container{width: 100%;}
+    }
+
+    @media(max-width:768px){
+        #main{width: 95%;}
+    
+        .img{width: 100%;}
+    
+        #header{
+        margin: 10px 0;
+        padding: 20px;
+        gap: 10px;
+        justify-content: center;
+        }
+    
+        #header h2{padding: 5px 0;}
+    }
+    
+    @media(max-width:480px){
+        #header h2{
+        text-align: center;
+        font-size: 1.5rem;
+        }
+    
+        #search_box{
+        width: 80%;
+        margin: auto;
+        }
+    
+        #search_box input{font-size: .7rem;}
+    }
 
 
 

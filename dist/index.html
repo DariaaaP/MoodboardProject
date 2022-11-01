@@ -5,11 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">  
-    <link rel="stylesheet" href="/profile-page.e86c4a0e.css">
+    <link rel="stylesheet" href="/index.e86c4a0e.css">
     <title>Document</title>
-    <style>
-
-</style>
 </head>
 <body>
     <header class="header">
@@ -19,37 +16,41 @@
         </nav>
     </header>
     <div class="container">
+        
         <a href="/profile-page.html" class="profile">
             <img id="avatar-pic" alt="pic">
             <p id="nickname" class="profile_nickname"></p>
         </a>
 
-        
         <div class="gallery">
 
                 <div class="emotions">
                     <h1>Какое у тебя сегодня настроение?</h1>
-                    <img src="/happy.506ec9ab.png" alt="" data-mood="happy" id="mood">
-                    <img src="/sad.cbffbd36.png" alt="" data-mood="sad" id="mood">
-                    <img src="/angry.be3d4879.png" alt="" data-mood="angry" id="mood">
-                    <img src="/productive.f1ac98a2.png" alt="" data-mood="productive" id="mood">
-                    <img src="/relaxed.e2629e60.png" alt="" data-mood="relaxed" id="mood">
-                    <img src="/stressed.b29e00dd.png" alt="" data-mood="stressed" id="mood">
-                    <img src="/tired.a261e360.png" alt="" data-mood="tired" id="mood">
+                        <img src="/happy.506ec9ab.png" alt="" data-mood="happy" data-card="http://localhost:3001/happy" id="mood">
+                        <img src="/sad.cbffbd36.png" alt="" data-mood="sad" data-card="http://localhost:3001/sad" id="mood">
+                        <img src="/angry.be3d4879.png" alt="" data-mood="angry" data-card="http://localhost:3001/angry" id="mood">
+                        <img src="/productive.f1ac98a2.png" alt="" data-mood="productive" data-card="http://localhost:3001/productive" id="mood">
+                        <img src="/relaxed.e2629e60.png" alt="" data-mood="relaxed" data-card="http://localhost:3001/relaxed" id="mood">
+                        <img src="/stressed.b29e00dd.png" alt="" data-mood="stressed" data-card="http://localhost:3001/stressed" id="mood">
+                        <img src="/tired.a261e360.png" alt="" data-mood="tired" data-card="http://localhost:3001/tired" id="mood">
                 </div>
                 <div id="header">
-                <div id="search_box" class="show">
-                    <input id="input" type="text" placeholder="Search..."><i id="search" class="fas fa-search"></i>
+                    <div id="search_box" class="show">
+                        <input id="input" type="text" placeholder="Search..."><i id="search" class="fas fa-search"></i>
+                    </div>
                 </div>
-                </div>
-
-            </div>        
-        
+        </div>    
     </div>
+
     <div class="container grid">
         <div id="grid"></div>
     </div>
+
+    <div class="container">
+        <div class="cardsContainer"></div> 
+    </div>
+
     <script src="/profile-page.fdac86c9.js"></script>
-    <script src="/index.393aad75.js"></script>
-<script src="/MoodboardProject.3464ddca.js"></script></body>
+    <script src="/index.8a60d273.js" defer=""></script>
+</body>
 </html>
