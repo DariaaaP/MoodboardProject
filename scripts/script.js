@@ -5,6 +5,8 @@ let btnChangeNickname = document.querySelector('#change-nickname-btn');
 let btnSaveNickname = document.querySelector('#save-nickname-btn');
 let btnCancelNickname = document.querySelector('#cancel-nickname-btn');
 
+let formatLink = /(^data?:\/\/)?[a-z0-9~_\-\.]+\.[a-z]{2,9}(\/|:|\?[!-~]*)?$/i;
+
 let changePic = document.querySelector(".change-pic");
 let inputPic = document.querySelector("#avatar");
 let imgPic = document.querySelector("#avatar-pic");
@@ -16,9 +18,10 @@ let divNickname = document.querySelector("#nickname");
 let list = document.querySelector(".date_number");
 let mood = document.querySelector('.information-mood');
 
-function changeElement(btn, container) {
+function changeElement(btn, container, input) {
     btn.classList.toggle("invisible");
     container.classList.toggle("invisible");
+    input.classList.remove("error");
 }
 divNickname.innerHTML = localStorage.getItem('namee');
 
@@ -28,11 +31,16 @@ function saveElement(input, type, elem, container, btn) {
         if (type == 'innerHtml') {
             elem.innerHTML = src;
             localStorage.setItem('namee', elem.innerHTML);
+            changeElement(btn, container, input);
         } else if (type == 'src') {
-            elem.src = src;
-            localStorage.setItem("avatar", elem.src);
+            if (ValidInput(input, formatLink)) {
+                elem.src = src;
+                localStorage.setItem("avatar", elem.src);
+                changeElement(btn, container, input);
+            } else {
+                alert ("Поле заполнено некорректно!")
+            }
         }
-        changeElement(btn, container);
     } else {
         alert("Поле не заполнено")
     }
@@ -69,6 +77,17 @@ let btns = document.querySelectorAll('.date_btn');
 
 let keys = Object.keys(localStorage);
 
+function ValidInput(input, format) {
+    if (input.value.match(format)) {
+        input.classList.remove("error");
+        return true;
+    }
+    else {
+        input.classList.add("error");
+        return false;
+    }
+}
+
 btns.forEach((btn, index) => {
     btn.addEventListener('click', () => {
         getInfo();
@@ -96,11 +115,11 @@ btns.forEach((btn, index) => {
 
 btnChangeAvatar.addEventListener('click', () => changeElement(btnChangeAvatar, changePic));
 btnSaveAvatar.addEventListener('click', () => saveElement(inputPic, "src", imgPic, changePic, btnChangeAvatar));
-btnCancelAvatar.addEventListener('click', () => changeElement(btnChangeAvatar, changePic));
+btnCancelAvatar.addEventListener('click', () => changeElement(btnChangeAvatar, changePic, inputPic));
 
 
 btnChangeNickname.addEventListener('click', () => changeElement(btnChangeNickname, changeNickname));
 btnSaveNickname.addEventListener('click', () => saveElement(inputNickname, "innerHtml", divNickname, changeNickname, btnChangeNickname));
-btnCancelNickname.addEventListener('click', () => changeElement(btnChangeNickname, changeNickname));
+btnCancelNickname.addEventListener('click', () => changeElement(btnChangeNickname, changeNickname, inputNickname));
 
 

@@ -396,6 +396,10 @@ input::placeholder {
   }
 }
 
+.error {
+  box-shadow: 0 0 15px red;
+}
+
 .form {
   width: 60vw;
   height: 80vh;
