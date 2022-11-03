@@ -40,7 +40,10 @@ function renderTodos(todos) {
             ${item.name}
             <button class="delete-button">X</button>
             `;
-        todoItemsList.append(li);
+        todoItemsList.prepend(li);
+        if (li.classList.contains('checked')) {
+            todoItemsList.append(li);
+        }
     });
 }
 

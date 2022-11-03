@@ -232,8 +232,6 @@ body {
     width: 100%;
     margin: 0 auto;
 
-    // display: flex;
-
     background: linear-gradient(45deg, #d299c2, #fef9d7);
     border-radius: 15px;
 }
@@ -244,35 +242,70 @@ body {
 
     display: flex;
 
-    // background: linear-gradient(45deg, #d299c2, #fef9d7);
-    // border-radius: 15px;
+    &__info {
+        margin: 3% 5%;
+        padding: 3%;
+        width: 40%;
+
+        text-align: center;
+    }
+
+    &__nickname {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        margin-top: 5%;
+    }
+
+    &__calendar {
+        width: 40%;
+        height: 200px;
+        padding: 3%;
+        margin: 3% 5%;
+        margin-top: 10%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+
+        background: radial-gradient(circle, rgba(246, 235, 169, 1) 0%, rgba(250, 172, 149, 1) 100%);
+        border-radius: 11px;
+    }
 }
 
-.container-nickname {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    margin-top: 5%;
-}
-
-.container-info {
-    margin: 3% 5%;
-    padding: 3%;
-    width: 40%;
-
-    text-align: center;
-}
-
-.container-calendar,
 .information-mood {
-    width: 40%;
+    display: none;
 
-    background-color: rgba(182, 82, 179, .3);
-    border-radius: 11px;
+    &.show {
+        width: 100%;
+        padding: 5%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        animation: show 2s 1;
+        background: radial-gradient(circle, rgba(192, 174, 238, 1) 0%, rgba(233, 148, 181, 1) 100%);
+    }
 }
 
-#month {
+#avatar-pic {
+    height: 50%;
+    width: 50%;
+    margin-right: 5px;
+    margin: 3%;
+
+    border-radius: 100%;
+}
+
+#nickname {
+    width: 50%;
+    margin: 5%;
+    margin-bottom: 0;
+
     font-size: 3.5vw;
 }
 
@@ -312,35 +345,8 @@ body {
     }
 }
 
-.container-calendar {
-    height: 200px;
-    padding: 3%;
-    margin: 3% 5%;
-    margin-top: 10%;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-
-    background: radial-gradient(circle, rgba(246, 235, 169, 1) 0%, rgba(250, 172, 149, 1) 100%);
-}
-
-.information-mood {
-    display: none;
-
-    &.show {
-        width: 100%;
-        padding: 5%;
-
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-        animation: show 2s 1;
-        background: radial-gradient(circle, rgba(192, 174, 238, 1) 0%, rgba(233, 148, 181, 1) 100%);
-    }
+#month {
+    font-size: 3.5vw;
 }
 
 .date_number {
@@ -367,22 +373,6 @@ body {
     }
 }
 
-#avatar-pic {
-    height: 50%;
-    width: 50%;
-    margin-right: 5px;
-    margin: 3%;
-
-    border-radius: 100%;
-}
-
-#nickname {
-    width: 50%;
-    margin: 5%;
-    margin-bottom: 0;
-
-    font-size: 3.5vw;
-}
 
 input {
     width: 100%;
@@ -404,16 +394,6 @@ input {
     display: none;
 }
 
-
-.hint {
-    display: flex;
-    width: 100%;
-    margin: 5px 0 10px 5px;
-
-    font-size: 13px;
-    color: #8D8D8D;
-    text-align: left;
-}
 
 .click {
     background-color: rgb(46, 0, 139);
@@ -467,16 +447,17 @@ input {
 
 .container-options {
     display: flex;
-}
 
-.container-todo,
-.container-card {
-    width: 40%;
-    margin: 0 auto;
-    margin-bottom: 5%;
+    &__todo,
+    &__card {
+        width: 40%;
+        margin: 0 auto;
+        margin-bottom: 5%;
 
-    border-radius: 11px;
-    background: radial-gradient(circle, rgba(246, 235, 169, 1) 0%, rgba(250, 172, 149, 1) 100%);
+        border-radius: 11px;
+        background: radial-gradient(circle, rgba(246, 235, 169, 1) 0%, rgba(250, 172, 149, 1) 100%);
+    }
+
 }
 
 .card {
@@ -539,93 +520,33 @@ input {
 }
 
 
-.empty {
-    text-align: center;
-    color: grey;
-}
-
 button:hover {
     cursor: pointer;
-    // background-color: #73E831;
 }
 
 ul {
     list-style-type: none;
-    /* get rid of bullet points on side of list items */
 }
 
-/* todo-form */
-.todo-form {
-    margin: 40px 0px;
-}
-
-.todo-input {
-    width: 250px;
-    border: none;
-    outline: none;
-    border-radius: 5px;
-    padding: 10px;
-    margin-right: 10px;
-    font-size: 1rem;
-}
-
-.add-button {
-
-    background-color: #780fb1;
-    color: #fff;
-    border: none;
-    outline: none;
-    border-radius: 5px;
-    padding: 7px;
-    font-size: 1.2rem;
-}
-
-/* todo-form style ends */
-/* todo-items */
-.todo-items {
-    min-width: 350px;
-}
-
-// input[type=checkbox] {
-//     // width: 10%;
-// }
-
-/* each li with class="item" */
 .item {
-
     display: flex;
     justify-content: space-between;
-
-    // background-color: #fff;
-    border: 1px solid black;
     padding: 10px;
-    font-size: 1.1rem;
     margin: 1%;
-}
 
-.item:first-child {
-    border-top-left-radius: 7px;
-    border-top-right-radius: 7px;
-}
+    border: 1px solid black;
+    font-size: 1.1rem;
+    background-color: rgba(139, 0, 139, 0.498);
 
-.item:last-child {
-    border-bottom-left-radius: 7px;
-    border-bottom-right-radius: 7px;
-}
+    &:first-child {
+        border-top-left-radius: 7px;
+        border-top-right-radius: 7px;
+    }
 
-/* item style end */
-.checkbox {
-    width: 0.8em;
-    height: 0.8em;
-    cursor: pointer;
-    border-radius: 50%;
-    background-color: white;
-    border: 1px solid rgb(255, 255, 255);
-    margin-right: 10px;
-}
-
-.checkbox:checked {
-    background-color: #53ebcd;
+    &:last-child {
+        border-bottom-left-radius: 7px;
+        border-bottom-right-radius: 7px;
+    }
 }
 
 .delete-button {
@@ -644,10 +565,10 @@ ul {
     }
 }
 
-
 .checked {
     text-decoration: line-through;
     color: rgb(166, 166, 166);
+    background-color: unset;
 }
 
 .check {
