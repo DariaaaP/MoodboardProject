@@ -15,15 +15,12 @@ let divNickname = document.querySelector("#nickname");
 
 let list = document.querySelector(".date_number");
 let mood = document.querySelector('.information-mood');
-let btns = document.querySelectorAll('.date_btn');
-let keys = Object.keys(localStorage);
-
-divNickname.innerHTML = localStorage.getItem('namee');
 
 function changeElement(btn, container) {
     btn.classList.toggle("invisible");
     container.classList.toggle("invisible");
 }
+divNickname.innerHTML = localStorage.getItem('namee');
 
 function saveElement(input, type, elem, container, btn) {
     let src = input.value;
@@ -52,14 +49,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 let month = document.querySelector('#month');
 let month_names = ['January', 'February', 'March','April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-let date = new Date();
+let date = new Date()
 month.innerHTML = month_names[date.getMonth()]+ ' ' + date.getFullYear();
 
 Date.prototype.daysInMonth = function() {
     return 32 - new Date(this.getFullYear(), this.getMonth(), 32).getDate();
 };
-
 let dates = new Date().daysInMonth();
+
 for (let i=1; i <= dates; i++) {
     list.innerHTML += (`<button class="date_btn">${i}</button>`);
 }
@@ -68,6 +65,9 @@ function getInfo() {
     mood.classList.toggle('show');
 }
 
+let btns = document.querySelectorAll('.date_btn');
+
+let keys = Object.keys(localStorage);
 
 btns.forEach((btn, index) => {
     btn.addEventListener('click', () => {
