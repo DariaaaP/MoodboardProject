@@ -18,10 +18,10 @@
     </header>
     <div class="container-page">
         <div class="container-profile">
-            <div class="container-info">
-                <div class="container-avatar">
+            <div class="container-profile__info">
+                <div class="container-profile__avatar">
                     <img id="avatar-pic" src="https://cdnn21.img.ria.ru/images/148839/96/1488399659_0:0:960:960_1440x900_80_0_1_de097f65991b7b7c1f36b65356d4d34c.jpg.webp?source-sid=not_rian_photo" alt="ava">
-                    <div>
+                    <div class="container-profile__navigation">
                         <button class="btn" id="change-pic-btn"><span>Изменить аватар</span></button>
                         <div class="change-pic invisible">
                             <input id="avatar" type="text" placeholder="link">
@@ -30,7 +30,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="container-nickname">
+                <div class="container-profile__nickname">
                     <div id="nickname"></div>
                     <button class="btn" id="change-nickname-btn"><span>Изменить никнейм</span></button>
                     <div class="change-nickname invisible">
@@ -41,16 +41,16 @@
                 </div>
             </div>
 
-            <div class="container-calendar">
+            <div class="container-profile__calendar">
                 <div id="month"></div>
                 <div class="date_number">
 
                 </div>
-                <div class="information-mood hide"></div>
+                <div class="information-mood"></div>
             </div>
         </div>
         <div class="container-options">
-            <div class="container-todo">
+            <div class="container-options__todo">
                 <div class="card">
                     <div class="card_body main-card">
                         <h1 class="card_title">ToDo List</h1>
@@ -62,7 +62,7 @@
                 <ul class="todo-items">
                 </ul>
             </div>
-            <div class="container-card">
+            <div class="container-options__card">
                 <div class="card">
                     <div class="card_body main-card">
                         <h1 class="card_title">Notes</h1>
