@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style/style.scss"></head>
-    <title>Document</title>
+    <link rel="stylesheet" href="./style/style.scss">
+</head>
+<title>Document</title>
+
 <body>
     <header class="header">
         <nav class="header__nav">
@@ -13,39 +16,71 @@
             <a class="header__link" href="./index.html">Главная</a>
         </nav>
     </header>
-    <div class="container-profile">
-        <div class="container-info">
-            <div class="container-avatar">
-                <img id="avatar-pic" src="https://cdnn21.img.ria.ru/images/148839/96/1488399659_0:0:960:960_1440x900_80_0_1_de097f65991b7b7c1f36b65356d4d34c.jpg.webp?source-sid=not_rian_photo" alt="ava">
-                <div>
-                    <button class="btn" id="change-pic-btn"><span>Изменить аватар</span></button>
-                    <div class="change-pic invisible">
-                        <input id="avatar" type="text" placeholder="link">
-                        <button class="btn" id="save-pic-btn"><span>Сохранить</span></button>
-                        <button class="btn"id="cancel-pic-btn"><span>Отменить</span></button>
+    <div class="container-page">
+        <div class="container-profile">
+            <div class="container-info">
+                <div class="container-avatar">
+                    <img id="avatar-pic"
+                        src="https://cdnn21.img.ria.ru/images/148839/96/1488399659_0:0:960:960_1440x900_80_0_1_de097f65991b7b7c1f36b65356d4d34c.jpg.webp?source-sid=not_rian_photo"
+                        alt="ava">
+                    <div>
+                        <button class="btn" id="change-pic-btn"><span>Изменить аватар</span></button>
+                        <div class="change-pic invisible">
+                            <input id="avatar" type="text" placeholder="link">
+                            <button class="btn" id="save-pic-btn"><span>Сохранить</span></button>
+                            <button class="btn" id="cancel-pic-btn"><span>Отменить</span></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-nickname">
+                    <div id="nickname"></div>
+                    <button class="btn" id="change-nickname-btn"><span>Изменить никнейм</span></button>
+                    <div class="change-nickname invisible">
+                        <input id="nickname-input" type="text" placeholder="new nickname">
+                        <button class="btn" id="save-nickname-btn"><span>Сохранить</span></button>
+                        <button class="btn" id="cancel-nickname-btn"><span>Отменить</span></button>
                     </div>
                 </div>
             </div>
-            <div class="container-nickname">
-                <div id="nickname"></div>
-                <button class="btn" id="change-nickname-btn"><span>Изменить никнейм</span></button>
-                <div class="change-nickname invisible">
-                    <input id="nickname-input" type="text" placeholder="new nickname">
-                    <button class="btn" id="save-nickname-btn"><span>Сохранить</span></button>
-                    <button class="btn" id="cancel-nickname-btn"><span>Отменить</span></button>
+
+            <div class="container-calendar">
+                <div id="month"></div>
+                <div class="date_number">
+
+                </div>
+                <div class="information-mood hide"></div>
+            </div>
+        </div>
+        <div class="container-options">
+            <div class="container-todo">
+                <div class="card">
+                    <div class="card_body main-card">
+                        <h1 class="card_title">ToDo List</h1>
+                        <textarea id="addToDo" class="card_text" placeholder="Введите список дел"></textarea>
+                        <br />
+                        <button id="addBtnToDo" class="btn"><span>Добавить</span></button>
+                    </div>
+                </div>
+                <ul class="todo-items">
+                </ul>
+            </div>
+            <div class="container-card">
+                <div class="card">
+                    <div class="card_body main-card">
+                        <h1 class="card_title">Notes</h1>
+                        <textarea id="addNote" class="card_text" placeholder="Введите заметку"></textarea>
+                        <br />
+                        <button id="addBtn" class="btn"><span>Добавить</span></button>
+                    </div>
+                </div>
+                <div id="notes">
                 </div>
             </div>
         </div>
-
-        <div class="container-calendar">
-            <div id="month"></div>
-            <div class="date_number">
-
-            </div>
-            <div class="information-mood hide"></div>
-        </div>
-        <!-- <div class="information-mood hide"></div> -->
     </div>
     <script src="./scripts/script.js"></script>
+    <script src="./scripts/todo.js"></script>
+    <script src="./scripts/notes.js"></script>
 </body>
+
 </html>

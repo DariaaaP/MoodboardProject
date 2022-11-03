@@ -18,6 +18,7 @@ let divNickname = document.querySelector("#nickname");
 let list = document.querySelector(".date_number");
 let mood = document.querySelector('.information-mood');
 
+
 function changeElement(btn, container, input) {
     btn.classList.toggle("invisible");
     container.classList.toggle("invisible");
@@ -121,5 +122,3 @@ btnCancelAvatar.addEventListener('click', () => changeElement(btnChangeAvatar, c
 btnChangeNickname.addEventListener('click', () => changeElement(btnChangeNickname, changeNickname));
 btnSaveNickname.addEventListener('click', () => saveElement(inputNickname, "innerHtml", divNickname, changeNickname, btnChangeNickname));
 btnCancelNickname.addEventListener('click', () => changeElement(btnChangeNickname, changeNickname, inputNickname));
-
-
