@@ -228,6 +228,15 @@ body {
     }
 }
 
+.container-page {
+    width: 100%;
+    margin: 0 auto;
+
+    // display: flex;
+
+    background: linear-gradient(45deg, #d299c2, #fef9d7);
+    border-radius: 15px;
+}
 
 .container-profile {
     width: 100%;
@@ -235,8 +244,8 @@ body {
 
     display: flex;
 
-    background: linear-gradient(45deg, #d299c2, #fef9d7);
-    border-radius: 15px;
+    // background: linear-gradient(45deg, #d299c2, #fef9d7);
+    // border-radius: 15px;
 }
 
 .container-nickname {
@@ -456,6 +465,210 @@ input {
     box-shadow: 0 0 15px red;
 }
 
+.container-options {
+    display: flex;
+}
+
+.container-todo,
+.container-card {
+    width: 40%;
+    margin: 0 auto;
+    margin-bottom: 5%;
+
+    border-radius: 11px;
+    background: radial-gradient(circle, rgba(246, 235, 169, 1) 0%, rgba(250, 172, 149, 1) 100%);
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    align-items: center;
+    margin-top: 3%;
+
+    &.notes_card {
+        width: 80%;
+        margin: 3% auto;
+
+        background-color: rgba(139, 0, 139, 0.498);
+        border-radius: 11px;
+    }
+
+}
+
+.card_body {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+
+    &.main-card {
+        align-items: center;
+    }
+
+    .noted-time {
+        font-size: 2.5vh;
+        text-align: left;
+    }
+
+    textarea {
+        width: 90%;
+        resize: vertical;
+    }
+}
+
+.card_text {
+    display: block;
+    width: 100%;
+    padding: 1%;
+
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: black;
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 11px;
+}
+
+
+.btn_delete {
+    color: white;
+    background-color: purple;
+}
+
+
+.empty {
+    text-align: center;
+    color: grey;
+}
+
+button:hover {
+    cursor: pointer;
+    // background-color: #73E831;
+}
+
+ul {
+    list-style-type: none;
+    /* get rid of bullet points on side of list items */
+}
+
+/* todo-form */
+.todo-form {
+    margin: 40px 0px;
+}
+
+.todo-input {
+    width: 250px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-right: 10px;
+    font-size: 1rem;
+}
+
+.add-button {
+
+    background-color: #780fb1;
+    color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 7px;
+    font-size: 1.2rem;
+}
+
+/* todo-form style ends */
+/* todo-items */
+.todo-items {
+    min-width: 350px;
+}
+
+// input[type=checkbox] {
+//     // width: 10%;
+// }
+
+/* each li with class="item" */
+.item {
+
+    display: flex;
+    justify-content: space-between;
+
+    // background-color: #fff;
+    border: 1px solid black;
+    padding: 10px;
+    font-size: 1.1rem;
+    margin: 1%;
+}
+
+.item:first-child {
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+
+.item:last-child {
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+
+/* item style end */
+.checkbox {
+    width: 0.8em;
+    height: 0.8em;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid rgb(255, 255, 255);
+    margin-right: 10px;
+}
+
+.checkbox:checked {
+    background-color: #53ebcd;
+}
+
+.delete-button {
+    float: right;
+    border: none;
+    outline: none;
+    border-radius: 7px;
+    padding: 2px 5px;
+    margin-left: 10px;
+    font-size: 1.1rem;
+    font-weight: 550;
+
+    &:hover {
+        background-color: rgba(139, 0, 139, 0.498);
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    }
+}
+
+
+.checked {
+    text-decoration: line-through;
+    color: rgb(166, 166, 166);
+}
+
+.check {
+    width: 2em;
+    height: 2em;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid black;
+    -webkit-appearance: none;
+
+    &:hover {
+        background-color: rgba(139, 0, 139, 0.498);
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    }
+}
+
+.check:checked {
+    background-color: #81279f;
+    border: none;
+}
 
 
 .form {
