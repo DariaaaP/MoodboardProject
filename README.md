@@ -19,4 +19,4 @@
 + запустите проект: `npm run watch`
 + сервер доступен по адресу: http://localhost:3000
 
-***Технологии:*** HTML5, CSS3, SASS, JS, Parcel
+***Технологии:*** HTML5, CSS3, SASS, JavaScript, Parcel
